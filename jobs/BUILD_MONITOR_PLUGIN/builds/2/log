@@ -1,0 +1,6 @@
+[BuildResultTrigger] A change to build result ([8mha:AAAAkR+LCAAAAAAAAP9b85aBtbiIQSajNKU4P08vOT+vOD8nVc+jsiC1KCczL9svvyTVzHb1RttJBUeZGJg8GdhyUvPSSzJ8GJhLi3JKGIR8shLLEvVzEvPS9YNLijLz0q0rihik0IxzhtAgwxgggJGJgaGiAMhgBpoB1JeenlrknFhanOqYXJKZnwcA6A2a3ZcAAAA=[0mlog)
+Building in workspace /Users/ansumanroy/.hudson/jobs/BUILD_MONITOR_PLUGIN/workspace
+[workspace] $ /bin/sh -xe /var/folders/sc/65kmng4d1zj6npm888qsrhph0000gn/T/hudson4446568469172394110.sh
++ echo 'build has failed'
+build has failed
+Finished: SUCCESS

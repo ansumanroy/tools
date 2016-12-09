@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers>
+    <org.jenkinsci.plugins.buildresulttrigger.BuildResultTrigger plugin="buildresult-trigger@0.17">
+      <spec>* * * * *</spec>
+      <combinedJobs>true</combinedJobs>
+      <jobsInfo>
+        <org.jenkinsci.plugins.buildresulttrigger.model.BuildResultTriggerInfo>
+          <jobNames>test111, </jobNames>
+          <checkedResults>
+            <org.jenkinsci.plugins.buildresulttrigger.model.CheckedResult>
+              <checked>FAILURE</checked>
+            </org.jenkinsci.plugins.buildresulttrigger.model.CheckedResult>
+            <org.jenkinsci.plugins.buildresulttrigger.model.CheckedResult>
+              <checked>UNSTABLE</checked>
+            </org.jenkinsci.plugins.buildresulttrigger.model.CheckedResult>
+          </checkedResults>
+        </org.jenkinsci.plugins.buildresulttrigger.model.BuildResultTriggerInfo>
+      </jobsInfo>
+    </org.jenkinsci.plugins.buildresulttrigger.BuildResultTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>echo &quot;build has failed&quot;</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

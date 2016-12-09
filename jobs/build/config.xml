@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+
+   <hudson.tasks.Shell>
+      <command>echo &quot;Executing Sequence 1&quot;</command>
+    </hudson.tasks.Shell>
+
+
+    <hudson.tasks.Shell>
+      <command>echo &quot;Executing for Fun&quot;</command>
+    </hudson.tasks.Shell>
+
+   <hudson.tasks.Shell>
+      <command>echo &quot;Executing Sequence 2&quot;</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

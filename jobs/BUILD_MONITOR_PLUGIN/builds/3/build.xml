@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<build>
+  <actions>
+    <org.jenkinsci.lib.xtrigger.XTriggerCauseAction plugin="buildresult-trigger@0.17">
+      <build class="build" reference="../../.."/>
+    </org.jenkinsci.lib.xtrigger.XTriggerCauseAction>
+    <hudson.model.CauseAction>
+      <causes>
+        <org.jenkinsci.lib.xtrigger.XTriggerCause plugin="buildresult-trigger@0.17">
+          <triggerName>BuildResultTrigger</triggerName>
+          <causeFrom>A change to build result</causeFrom>
+          <logEnabled>true</logEnabled>
+        </org.jenkinsci.lib.xtrigger.XTriggerCause>
+      </causes>
+    </hudson.model.CauseAction>
+  </actions>
+  <queueId>11</queueId>
+  <timestamp>1476856500350</timestamp>
+  <startTime>1476856500352</startTime>
+  <result>SUCCESS</result>
+  <duration>27</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/Users/ansumanroy/.hudson/jobs/BUILD_MONITOR_PLUGIN/workspace</workspace>
+  <hudsonVersion>1.651.1</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</build>
