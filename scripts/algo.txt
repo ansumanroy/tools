@@ -1,0 +1,35 @@
+curl --silent --show-error http://admin:9fd5290c8f0678cb5706e4deb2dd679e@localhost:8080
+
+
+Create
+curl -X POST -H "Content-Type:application/xml" -d @config.xml http://admin:9fd5290c8f0678cb5706e4deb2dd679e@localhost:8080/createItem?name=TestBarometers_job
+
+Modify
+
+# Get current config
+curl -X GET http://developer:developer@localhost:8080/job/test/config.xml -o mylocalconfig.xml
+
+# Post updated config
+curl -X POST http://developer:developer@localhost:8080/job/test/config.xml --data-binary "@mymodifiedlocalconfig.xml"
+
+
+Algorithm
+1. Fetch latest branch from GIT - Clone repo, yada yada yada
+2. Enter params as list of jobs
+3. Validate if all names provided by user is present in GIT Repo(compulsory)
+4. Throw error even if a single name doesnt match
+5. Loop throught all the jobs
+6. If job doesnt exist
+	create jenkins job with command 
+		curl -X POST -H "Content-Type:application/xml" -d @config.xml http://admin:9fd5290c8f0678cb5706e4deb2dd679e@localhost:8080/createItem?name=TestBarometers_job
+7. if job exists do an update to the config.xml
+	  a. get the original config.xml and backit up - restAPI/Command/DateStamp/JOB_NAME/config.xml
+			# Get current config
+				curl -X GET http://developer:developer@localhost:8080/job/test/config.xml -o mylocalconfig.xml
+	  b. update the config.xml by running this commnad
+	         # Post updated config
+				curl -X POST http://developer:developer@localhost:8080/job/test/config.xml --data-binary "@mymodifiedlocalconfig.xml"
+8. Say thank you
+
+
+
