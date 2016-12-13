@@ -1,4 +1,4 @@
-echo "hello world, hooray i m from this master"
+set +e
 
 #parameters
 #1. Branch Name
@@ -39,7 +39,7 @@ do
 
     if [ ! -d "$i" ]; then
 		echo "folder $i doesnt exist in GIT , Please check again. Now exiting!"
-		exit
+		exit 1
 		#break;
     fi
 
