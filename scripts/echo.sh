@@ -31,7 +31,7 @@ _listOfJobsRequested=$1
 
 ## look no git hub coding here :)
 #  validate if the job names exist in the branch
-cd ../jobs
+cd jobs
 
 for i in $(echo $_listOfJobsRequested | sed "s/,/ /g")
 do
