@@ -81,7 +81,7 @@ do
 		else
 			 #if no 404, then the config is present and job is not running, so go ahead and update it
 			 
-			 curl $jenkins_protocol://$jenkins_admin_username:$jenkins_admin_token@$jenkins_hostname:$jenkins_port/job/$i/lastBuild/api/json | grep --color result\":null
+			 curl $jenkins_protocol://$jenkins_admin_username:$jenkins_admin_token@$jenkins_hostname:$jenkins_port/job/$i/lastBuild/api/json | grep --color result\":null >/dev/null
 			
 			 if [ $? -eq 0 ]; then
 				 printf "${RED}Jenkins job exists with $i name in the destination, but is currently Running, WILL NOT UPDATE${NC}\n"
