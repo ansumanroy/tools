@@ -1,6 +1,8 @@
 set +x
 set +e
 
+echo "hello Jay and Rishi"
+
 #parameters
 #1. Branch Name
 #2. Repository Name/Variable
